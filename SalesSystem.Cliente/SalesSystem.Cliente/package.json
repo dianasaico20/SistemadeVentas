@@ -1,0 +1,11 @@
+{
+  "name": "salessystem-cliente",
+  "version": "1.0.0",
+  "description": "SalesSystem Cliente with Tailwind CSS",
+  "scripts": {
+    "build:css": "tailwindcss -i ./app.tailwind.css -o ./wwwroot/app.css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

@@ -11,5 +11,13 @@
     <ProjectReference Include="..\SalesSystem.Cliente.Client\SalesSystem.Cliente.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="10.0.2" />
   </ItemGroup>
+	
+	<Target Name="NpmInstall" BeforeTargets="TailwindCss">
+		<Exec Command="npm install" Condition="!Exists('node_modules')" />
+	</Target>
+	
+	<Target Name="TailwindCss" BeforeTargets="Build">
+		<Exec Command="npx tailwindcss -i ./app.tailwind.css -o ./wwwroot/app.css" />
+	</Target>
 
 </Project>
