@@ -1,0 +1,26 @@
+﻿global using SalesSystem.Application.Commons;
+global using SalesSystem.Application.Dtos.Auth;
+global using SalesSystem.Application.Dtos.Usuario;
+global using SalesSystem.Application.Enums;
+global using SalesSystem.Application.Interfaces.Usuarios;
+global using SalesSystem.Domain.Enums;
+global using SalesSystem.Domain.Interfaces;
+global using Microsoft.Extensions.Configuration; // Para leer la clave secreta
+global using SalesSystem.Application.Interfaces.Auth;
+global using SalesSystem.Domain.Entities;
+global using Microsoft.IdentityModel.Tokens;
+global using System.IdentityModel.Tokens.Jwt;
+global using System.Security.Claims;
+global using System.Text;
+global using SalesSystem.Application.Dtos.Cliente;
+global using SalesSystem.Application.Interfaces.Clientes;
+global using SalesSystem.Application.Dtos.Categoria;
+global using SalesSystem.Application.Dtos.Producto;
+global using SalesSystem.Application.Dtos.FormadePago;
+global using SalesSystem.Application.Dtos.DetalleVenta;
+global using SalesSystem.Application.Dtos.Venta;
+global using SalesSystem.Application.Interfaces.Categorias;
+global using SalesSystem.Application.Interfaces.Productos;
+global using SalesSystem.Application.Interfaces.FormasDePago;
+global using SalesSystem.Application.Interfaces.DetallesVenta;
+global using SalesSystem.Application.Interfaces.Ventas;

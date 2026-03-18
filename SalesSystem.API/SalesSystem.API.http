@@ -1,0 +1,45 @@
+@SalesSystem.API_HostAddress = https://localhost:7050
+
+GET {{SalesSystem.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+# 1. Crear Usuario 1 (POST)
+POST {{SalesSystem.API_HostAddress}}/Usuario/create
+Content-Type: application/json
+
+{
+  "id": 0,
+  "email": "nuevo@test.com",
+  "contraseña": "Password123!",
+  "rol": 1,
+  "estado": true,
+  "fechadeRegistro": "2026-02-01T18:00:00"
+}
+
+###
+
+# 2. Crear Usuario 2 (POST)
+POST {{SalesSystem.API_HostAddress}}/Usuario/create
+Content-Type: application/json
+
+{
+  "id": 0,
+  "email": "nuevo2@test.com",
+  "contraseña": "Password123!",
+  "rol": 1,
+  "estado": true,
+  "fechadeRegistro": "2026-02-01T18:00:00"
+}
+
+###
+
+# 3. PROBAR LOGIN 
+POST {{SalesSystem.API_HostAddress}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "nuevo@test.com",
+  "contraseña": "Password123!"
+}
